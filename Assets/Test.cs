@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Magic
+public class Boss
 {
     int mp = 53;
-    public void Attck()
+    public void Magic()
     {
-        if (mp > 5)
+        if (mp >= 5)
         {
             mp -= 5;
             Debug.Log("魔法攻撃をした。残りMPは" + mp + "。");
@@ -46,11 +46,11 @@ public class Test : MonoBehaviour
 
         //発展課題
         int mp = 53;
-        Magic magic = new Magic();
+        Boss boss = new Boss();
         //10回+１回ループ
         for(int i = 0; i < 11;i++)
         {
-            magic.Attck();
+            boss.Magic();
         }
         
     }
